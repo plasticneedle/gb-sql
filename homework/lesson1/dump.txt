@@ -1,0 +1,25 @@
+mysqldump example > var/lib/mysql/example/example.sql
+mysqldump sample < var/lib/mysql/example/example.sql
+Проверил
+mysql> USE sample;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SHOW TABLES;
++------------------+
+| Tables_in_sample |
++------------------+
+| users            |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> DESCRIBE users;
++-------+------------+------+-----+---------+-------+
+| Field | Type       | Null | Key | Default | Extra |
++-------+------------+------+-----+---------+-------+
+| id    | int(11)    | YES  |     | NULL    |       |
+| name  | varchar(5) | YES  |     | NULL    |       |
++-------+------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
